@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Youssef Ramadan — Front-End React Developer</title>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="CSS/style.css">
+
+    <!-- Meta -->
+    <meta name="description"
+        content="Youssef Ramadan — Front-End React Developer. Portfolio: React, Tailwind, TypeScript, JS, HTML, CSS, Git." />
+</head>
+
+<body>
+   
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="logo" href="#">Youssef<span>Ramadan</span></a>
+
+            <!-- Burger button (mobile) -->
+            <button id="burger" class="burger" aria-label="Open menu" aria-expanded="false">
+                <span class="burger-line"></span>
+                <span class="burger-line"></span>
+                <span class="burger-line"></span>
+            </button>
+
+            <nav class="nav" aria-label="Main navigation" id="main-nav">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+
+            <a class="cta" href="#contact">Hire Me</a>
+
+            <!-- Dark Mode Toggle beside Hire Me -->
+            <button id="theme-toggle" aria-label="Toggle dark mode" class="theme-toggle" aria-pressed="false">
+                <svg id="theme-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <main>
+        <section id="home" class="hero section" data-animate>
+            <div class="container hero-grid">
+                <div class="hero-left">
+                    <h1>Hi, I’m <strong>Youssef Ramadan</strong></h1>
+                    <p class="role">Front-End React Developer — building modern, responsive web apps with React, Next.js
+                        & Tailwind.</p>
+
+                    <div class="hero-actions">
+                        <a class="btn primary" href="#projects">View Projects</a>
+                        <a class="btn outline" href="#" download>Download CV</a>
+                    </div>
+
+                    <div class="links">
+                        <a href="https://github.com/iyousseframadan" target="_blank" rel="noopener">GitHub</a>
+                        <a href="https://www.linkedin.com/in/youssef-ramadan-44642b354/" target="_blank"
+                            rel="noopener">LinkedIn</a>
+                    </div>
+                </div>
+
+                <div class="hero-right">
+                    <div class="avatar-wrap" aria-hidden="false">
+                        <img src="Images/Portfolio.jpg" alt="Youssef Ramadan" class="avatar">
+                        <div class="badge">Front-End • React</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT -->
+        <section id="about" class="about section" data-animate>
+            <div class="container">
+                <h2 class="section-title">About Me</h2>
+                <div class="about-grid">
+                    <div class="about-text">
+                        <p>
+                            I’m a Front-End React Developer passionate about crafting modern, fast and accessible user
+                            interfaces.
+                            I build responsive web applications using React, Next.js, Tailwind CSS and TypeScript. I
+                            love turning
+                            complex UX problems into simple, elegant solutions.
+                        </p>
+
+                        <ul class="meta-list">
+                            <li><strong>University:</strong> Faculty of Computer & AI — Benha University (Computer
+                                Science)</li>
+                            <li><strong>Location:</strong> Benha, Egypt</li>
+                            <li><strong>Email:</strong> yo10sseframadan@gmail.com</li>
+                            <li><strong>Available:</strong> Freelance & Remote work</li>
+                        </ul>
+                    </div>
+
+                    <div class="about-stats">
+                        <div class="stat">
+                            <span class="num">12+</span>
+                            <p>Projects</p>
+                        </div>
+                        <div class="stat">
+                            <span class="num">3</span>
+                            <p>Technologies</p>
+                        </div>
+                        <div class="stat">
+                            <span class="num">1.5K</span>
+                            <p>Github Stars (sim)</p>
+                        </div>
+                        <div class="stat">
+                            <span class="num">4</span>
+                            <p>Years learning</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SKILLS -->
+        <section id="skills" class="skills section" data-animate>
+            <div class="container">
+                <h2 class="section-title">Skills</h2>
+
+                <div class="skills-grid">
+                    <div class="skill">
+                        <h4>React.js</h4>
+                        <div class="bar"><span style="width:90%" data-value="90%"></span></div>
+                    </div>
+                    <div class="skill">
+                        <h4>JavaScript (ES6+)</h4>
+                        <div class="bar"><span style="width:85%" data-value="85%"></span></div>
+                    </div>
+                    <div class="skill">
+                        <h4>TypeScript</h4>
+                        <div class="bar"><span style="width:70%" data-value="70%"></span></div>
+                    </div>
+                    <div class="skill">
+                        <h4>Tailwind CSS</h4>
+                        <div class="bar"><span style="width:85%" data-value="85%"></span></div>
+                    </div>
+                    <div class="skill">
+                        <h4>HTML & CSS</h4>
+                        <div class="bar"><span style="width:95%" data-value="95%"></span></div>
+                    </div>
+                    <div class="skill">
+                        <h4>Git & GitHub</h4>
+                        <div class="bar"><span style="width:80%" data-value="80%"></span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROJECTS -->
+        <section id="projects" class="projects section" data-animate>
+            <div class="container">
+                <h2 class="section-title">Projects</h2>
+                <p class="section-sub">Selected projects — code & live demo links included</p>
+
+                <div class="projects-grid">
+                    <article class="project-card">
+                        <div class="project-media">
+                            <img src="Images/Ecommece.png" alt="E-Commerce Project">
+                        </div>
+                        <div class="project-body">
+                            <h3>E-Commerce Web App</h3>
+                            <p>React, Tailwind, Context API, LocalStorage. Product listing, search, cart and responsive
+                                UI.</p>
+                            <div class="project-links">
+                                <a href="https://ecommerce-project-9j11.vercel.app" target="_blank"
+                                    rel="noopener">Live</a>
+                                <a href="https://github.com/iyousseframadan/ecommerce-project" target="_blank"
+                                    rel="noopener">Code</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-media">
+                            <img src="Images/Template.png" alt="Template">
+                        </div>
+                        <div class="project-body">
+                            <h3>Responsive Template (HTML & CSS)</h3>
+                            <p>Clean responsive template coded with HTML & CSS — optimized for layout and typography.
+                            </p>
+                            <div class="project-links">
+                                <a href="https://template-chi-two.vercel.app/" target="_blank" rel="noopener">Live</a>
+                                <a href="https://github.com/iyousseframadan/template" target="_blank" rel="noopener">Code</a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="project-card">
+                        <div class="project-media">
+                            <img src="Images/Movies.png" alt="Movies App">
+                        </div>
+                        <div class="project-body">
+                            <h3>Movies Web App</h3>
+                            <p>React + API integration. Browse trending movies, search and movie details pages.</p>
+                            <div class="project-links">
+                                <a href="https://movies-project0-lose.vercel.app/" target="_blank"
+                                    rel="noopener">Live</a>
+                                <a href="https://github.com/iyousseframadan/MoviesProject0" target="_blank"
+                                    rel="noopener">Code</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-media">
+                            <img src="Images/To Do.png" alt="To-Do App">
+                        </div>
+                        <div class="project-body">
+                            <h3>To-Do List App</h3>
+                            <p>React + LocalStorage. Add/edit/delete tasks with a clean UI.</p>
+                            <div class="project-links">
+                                <a href="https://to-do-list-app-sooty-psi.vercel.app/" target="_blank"
+                                    rel="noopener">Live</a>
+                                <a href="https://github.com/iyousseframadan/To-Do-List-App" target="_blank"
+                                    rel="noopener">Code</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section id="contact" class="contact section" data-animate>
+            <div class="container">
+                <h2 class="section-title">Contact</h2>
+                <p class="section-sub">Want to work together? Send a message and I’ll reply shortly.</p>
+
+                <div class="contact-grid">
+                <form id="contact-form" class="contact-form" action="https://formspree.io/f/mnngoqne" method="POST">
+                    <label>
+                        <span>Name</span>
+                        <input type="text" name="name" id="name" required placeholder="Your name">
+                    </label>
+                
+                    <label>
+                        <span>Email</span>
+                        <input type="email" name="email" id="email" required placeholder="your@email.com">
+                    </label>
+                
+                    <label>
+                        <span>Message</span>
+                        <textarea name="message" id="message" rows="5" required placeholder="Tell me about your project..."></textarea>
+                    </label>
+                
+                    <div class="form-actions">
+                        <button class="btn primary" type="submit">Send Message</button>
+                    </div>
+                </form>
+
+
+                    <aside class="contact-info">
+                        <div class="info-block">
+                            <h4>Email</h4>
+                            <p>yo10sseframadan@gmail.com</p>
+                        </div>
+                        <div class="info-block">
+                            <h4>Location</h4>
+                            <p>Benha, Egypt</p>
+                        </div>
+                        <div class="info-block">
+                            <h4>Links</h4>
+                            <p><a href="https://github.com/iyousseframadan" target="_blank" rel="noopener">GitHub</a>
+                            </p>
+                            <p><a href="https://www.linkedin.com/in/youssef-ramadan-44642b354/" target="_blank"
+                                    rel="noopener">LinkedIn</a></p>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="site-footer">
+            <div class="container footer-inner">
+                <p>© <span id="year"></span> Youssef Ramadan — Front-End React Developer</p>
+                <p>Designed & Built by Me</p>
+            </div>
+        </footer>
+    </main>
+
+    <script src="script.js" defer></script>
+</body>
+
+</html>
