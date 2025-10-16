@@ -14,17 +14,17 @@
   --glass-2: rgba(107, 70, 193, 0.12);
 }
 
-/* Light theme override (applied when .light on body) */
-/* Light theme override (applied when .light on body) */
+/* ---------- Light Theme ---------- */
 body.light {
-  --bg: #f7f7fb;
-  --card: #ffffffd9;
-  --muted: #4a4a4a;
-  --accent: #7c3aed;
-  --accent-2: #6d28d9;
+  --bg: #f5f3fa;
+  --card: #ffffff;
+  --muted: #444;
+  --accent: #7e3ff2;
+  --accent-2: #7e3ff2;
   --glass: rgba(20, 20, 20, 0.05);
-  --white: #111111; /* ← بدل #0b0b0b */
+  --white: #111;
 }
+
 /* ---------- Base ---------- */
 * {
   box-sizing: border-box;
@@ -35,7 +35,7 @@ body {
 }
 body {
   margin: 0;
-  background: linear-gradient(180deg, var(--bg), #07060a);
+  background: var(--bg); /* ← تم إزالة أي تدرج هنا */
   color: var(--white);
   font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto,
     "Helvetica Neue", Arial;
@@ -44,6 +44,7 @@ body {
   line-height: 1.5;
   transition: background var(--transition), color var(--transition);
 }
+
 
 /* ---------- Utilities ---------- */
 .container {
@@ -55,10 +56,11 @@ body {
 
 /* ---------- Header ---------- */
 .site-header {
-  position: sticky;
+  position: fixed;
   top: 0;
   z-index: 60;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.01), transparent);
+  width: 100%;
+  background: rgba(255, 255, 255, 0.04);
   backdrop-filter: blur(6px);
   border-bottom: 2px solid rgba(255, 255, 255, 0.02);
 }
@@ -106,9 +108,9 @@ body {
   background: var(--glass-2);
 }
 
-/* CTA */
+/* ---------- CTA Button ---------- */
 .cta {
-  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  background: var(--accent);
   padding: 10px 14px;
   border-radius: 10px;
   color: white;
@@ -121,6 +123,7 @@ body {
   transform: translateY(-3px);
   box-shadow: 0 12px 40px rgba(107, 70, 193, 0.16);
 }
+
 
 /* ---------- Burger button (mobile) ---------- */
 .burger {
@@ -212,7 +215,7 @@ body {
   transform-origin: center;
 }
 .btn.primary {
-  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  background: var(--accent);
   color: #fff;
 }
 .btn.outline {
@@ -230,11 +233,7 @@ body {
   filter: saturate(1.05);
 }
 .btn.outline:hover {
-  background: linear-gradient(
-    90deg,
-    rgba(139, 92, 246, 0.12),
-    rgba(236, 72, 153, 0.08)
-  );
+  background: rgba(139, 92, 246, 0.12);
   border-color: rgba(139, 92, 246, 0.18);
   color: var(--white);
 }
@@ -247,7 +246,7 @@ body {
   margin-top: 6px;
 }
 .links a {
-  color:rgba(255, 255, 255, 0.476);
+  color: var(--muted);
   text-decoration: none;
   font-weight: 600;
 }
@@ -265,11 +264,7 @@ body {
   overflow: hidden;
   box-shadow: 0 10px 40px rgba(107, 70, 193, 0.12);
   border: 1px solid rgba(255, 255, 255, 0.03);
-  background: linear-gradient(
-    180deg,
-    rgba(107, 70, 193, 0.06),
-    rgba(107, 70, 193, 0.02)
-  );
+  background: var(--card);
   transition: transform var(--transition), box-shadow var(--transition);
   will-change: transform;
 }
@@ -413,7 +408,7 @@ body {
   color: rgba(255, 255, 255, 0.594);
 }
 .project-card {
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent);
+  background: var(--card);
   border-radius: 12px;
   overflow: hidden;
   border: 1px solid rgba(255, 255, 255, 0.03);
