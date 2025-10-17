@@ -1,4 +1,4 @@
-// script.js — interactions: theme toggle, scroll reveal, skills animation, fake contact send, mobile burger
+// script.js — interactions: theme toggle, scroll reveal, mobile burger
 
 document.addEventListener("DOMContentLoaded", () => {
   // Elements
@@ -101,17 +101,6 @@ document.addEventListener("DOMContentLoaded", () => {
       entries.forEach((ent) => {
         if (ent.isIntersecting) {
           ent.target.classList.add("in-view");
-          // animate skill bars when skills section enters
-          if (
-            ent.target.id === "skills" ||
-            (ent.target.closest && ent.target.closest("#skills"))
-          ) {
-            document.querySelectorAll(".bar span").forEach((s) => {
-              const value =
-                s.getAttribute("data-value") || s.style.width || null;
-              if (value) s.style.width = value;
-            });
-          }
         }
       });
     },
@@ -127,21 +116,54 @@ document.addEventListener("DOMContentLoaded", () => {
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
   // Contact form fake send
+  // (هذا الكود كان يستخدم لإظهار رسالة "Sent ✓" بدون إرسال فعلي، تركته كما هو)
   const form = document.getElementById("contact-form");
-  const sendBtn = document.getElementById("send-btn");
+  // ملاحظة: زر الإرسال عندك لم يكن يحمل ID="send-btn" في ملف HTML الأصلي، لذا سأجعله يعمل على زر الـ submit مباشرةً.
+  const sendBtn = form ? form.querySelector('button[type="submit"]') : null;
+
   if (form && sendBtn) {
-    sendBtn.addEventListener("click", (e) => {
+    form.addEventListener("submit", (e) => {
+      // إذا كان عندك formspree أو backend، ستحتاج لإزالة preventDefault() والـ setTimeout
+      // لكن بما أنك تستخدم formspree، سأترك الكود كما كان في الأصل مع تعديل بسيط للـ ID
+      // للحفاظ على الـ "fake send" effect اللي كان موجود.
+
+      // بما أنك تستخدم Formspree، الإرسال الفعلي سيتم. سأضيف معالج استجابة بسيط.
+
+      // Formspree will handle the submission. Let's keep the UI feedback.
+      const initialText = sendBtn.textContent;
+
+      // Prevent default submission for a moment to show "Sending..."
       e.preventDefault();
       sendBtn.textContent = "Sending...";
       sendBtn.disabled = true;
-      setTimeout(() => {
-        sendBtn.textContent = "Sent ✓";
-        form.reset();
-        setTimeout(() => {
-          sendBtn.textContent = "Send Message";
-          sendBtn.disabled = false;
-        }, 2000);
-      }, 900);
+
+      fetch(form.action, {
+        method: form.method,
+        body: new FormData(form),
+        headers: {
+          Accept: "application/json",
+        },
+      })
+        .then((response) => {
+          if (response.ok) {
+            sendBtn.textContent = "Sent ✓";
+            form.reset();
+          } else {
+            sendBtn.textContent = "Error ❌";
+          }
+          // Reset button after 3 seconds
+          setTimeout(() => {
+            sendBtn.textContent = initialText;
+            sendBtn.disabled = false;
+          }, 3000);
+        })
+        .catch((error) => {
+          sendBtn.textContent = "Error ❌";
+          setTimeout(() => {
+            sendBtn.textContent = initialText;
+            sendBtn.disabled = false;
+          }, 3000);
+        });
     });
   }
 
