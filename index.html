@@ -6,24 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Youssef Ramadan — Front-End React Developer</title>
 
-    <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 
-    <!-- Styles -->
     <link rel="stylesheet" href="CSS/style.css">
 
-    <!-- Meta -->
     <meta name="description"
         content="Youssef Ramadan — Front-End React Developer. Portfolio: React, Tailwind, TypeScript, JS, HTML, CSS, Git." />
 </head>
 
 <body>
-   
+
     <header class="site-header">
         <div class="container header-inner">
             <a class="logo" href="#">Youssef<span>Ramadan</span></a>
 
-            <!-- Burger button (mobile) -->
             <button id="burger" class="burger" aria-label="Open menu" aria-expanded="false">
                 <span class="burger-line"></span>
                 <span class="burger-line"></span>
@@ -42,7 +38,6 @@
 
             <a class="cta" href="#contact">Hire Me</a>
 
-            <!-- Dark Mode Toggle beside Hire Me -->
             <button id="theme-toggle" aria-label="Toggle dark mode" class="theme-toggle" aria-pressed="false">
                 <svg id="theme-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor">
                     <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
@@ -51,7 +46,6 @@
         </div>
     </header>
 
-    <!-- HERO -->
     <main>
         <section id="home" class="hero section" data-animate>
             <div class="container hero-grid">
@@ -62,7 +56,8 @@
 
                     <div class="hero-actions">
                         <a class="btn primary" href="#projects">View Projects</a>
-                        <a class="btn outline" href="https://github.com/iyousseframadan/My_Portfolio/blob/main/CV.pdf" download>Download CV</a>
+                        <a class="btn outline" href="https://github.com/iyousseframadan/My_Portfolio/blob/main/CV.pdf"
+                            download>Download CV</a>
                     </div>
 
                     <div class="links">
@@ -81,7 +76,6 @@
             </div>
         </section>
 
-        <!-- ABOUT -->
         <section id="about" class="about section" data-animate>
             <div class="container">
                 <h2 class="section-title">About Me</h2>
@@ -126,41 +120,27 @@
             </div>
         </section>
 
-        <!-- SKILLS -->
         <section id="skills" class="skills section" data-animate>
             <div class="container">
-                <h2 class="section-title">Skills</h2>
+                <h2 class="section-title">Technical Skills</h2>
+                <p class="section-sub">A focused stack for building high-quality, modern web experiences.</p>
 
                 <div class="skills-grid">
-                    <div class="skill">
-                        <h4>React.js</h4>
-                        <div class="bar"><span style="width:90%" data-value="90%"></span></div>
-                    </div>
-                    <div class="skill">
-                        <h4>JavaScript (ES6+)</h4>
-                        <div class="bar"><span style="width:85%" data-value="85%"></span></div>
-                    </div>
-                    <div class="skill">
-                        <h4>TypeScript</h4>
-                        <div class="bar"><span style="width:70%" data-value="70%"></span></div>
-                    </div>
-                    <div class="skill">
-                        <h4>Tailwind CSS</h4>
-                        <div class="bar"><span style="width:85%" data-value="85%"></span></div>
-                    </div>
-                    <div class="skill">
-                        <h4>HTML & CSS</h4>
-                        <div class="bar"><span style="width:95%" data-value="95%"></span></div>
-                    </div>
-                    <div class="skill">
-                        <h4>Git & GitHub</h4>
-                        <div class="bar"><span style="width:80%" data-value="80%"></span></div>
-                    </div>
+                    <div class="skill-box">React.js</div>
+                    <div class="skill-box">Next.js</div>
+                    <div class="skill-box">JavaScript (ES6+)</div>
+                    <div class="skill-box">TypeScript</div>
+                    <div class="skill-box">HTML5 & CSS3</div>
+                    <div class="skill-box">Tailwind CSS</div>
+                    <div class="skill-box">**Bootstrap**</div>
+                    <div class="skill-box">**Sass (SCSS)**</div>
+                    <div class="skill-box">**Responsive Design**</div>
+                    <div class="skill-box">Git & GitHub</div>
+                    <div class="skill-box">REST APIs</div>
+                    <div class="skill-box">Figma</div>
                 </div>
             </div>
         </section>
-
-        <!-- PROJECTS -->
         <section id="projects" class="projects section" data-animate>
             <div class="container">
                 <h2 class="section-title">Projects</h2>
@@ -194,7 +174,8 @@
                             </p>
                             <div class="project-links">
                                 <a href="https://template-chi-two.vercel.app/" target="_blank" rel="noopener">Live</a>
-                                <a href="https://github.com/iyousseframadan/template" target="_blank" rel="noopener">Code</a>
+                                <a href="https://github.com/iyousseframadan/template" target="_blank"
+                                    rel="noopener">Code</a>
                             </div>
                         </div>
                     </article>
@@ -230,38 +211,38 @@
                         </div>
                     </article>
 
-                    
+
                 </div>
             </div>
         </section>
 
-        <!-- CONTACT -->
         <section id="contact" class="contact section" data-animate>
             <div class="container">
                 <h2 class="section-title">Contact</h2>
                 <p class="section-sub">Want to work together? Send a message and I’ll reply shortly.</p>
 
                 <div class="contact-grid">
-                <form id="contact-form" class="contact-form" action="https://formspree.io/f/mnngoqne" method="POST">
-                    <label>
-                        <span>Name</span>
-                        <input type="text" name="name" id="name" required placeholder="Your name">
-                    </label>
-                
-                    <label>
-                        <span>Email</span>
-                        <input type="email" name="email" id="email" required placeholder="your@email.com">
-                    </label>
-                
-                    <label>
-                        <span>Message</span>
-                        <textarea name="message" id="message" rows="5" required placeholder="Tell me about your project..."></textarea>
-                    </label>
-                
-                    <div class="form-actions">
-                        <button class="btn primary" type="submit">Send Message</button>
-                    </div>
-                </form>
+                    <form id="contact-form" class="contact-form" action="https://formspree.io/f/mnngoqne" method="POST">
+                        <label>
+                            <span>Name</span>
+                            <input type="text" name="name" id="name" required placeholder="Your name">
+                        </label>
+
+                        <label>
+                            <span>Email</span>
+                            <input type="email" name="email" id="email" required placeholder="your@email.com">
+                        </label>
+
+                        <label>
+                            <span>Message</span>
+                            <textarea name="message" id="message" rows="5" required
+                                placeholder="Tell me about your project..."></textarea>
+                        </label>
+
+                        <div class="form-actions">
+                            <button class="btn primary" type="submit">Send Message</button>
+                        </div>
+                    </form>
 
 
                     <aside class="contact-info">
@@ -285,7 +266,6 @@
             </div>
         </section>
 
-        <!-- FOOTER -->
         <footer class="site-footer">
             <div class="container footer-inner">
                 <p>© <span id="year"></span> Youssef Ramadan — Front-End React Developer</p>
@@ -296,6 +276,5 @@
 
     <script src="script.js" defer></script>
 </body>
-
 
 </html>
